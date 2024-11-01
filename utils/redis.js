@@ -3,7 +3,6 @@ const redis = require('redis');
 class redisClient {
   constructor() {
     this.client = redis.createClient();
-
     this.client.on('error', (err) => { console.log('this is the error', err); });
   }
 
