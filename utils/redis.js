@@ -44,4 +44,5 @@ class redisClient {
   }
 }
 
+// eslint-disable-next-line new-cap
 module.exports = new redisClient();
