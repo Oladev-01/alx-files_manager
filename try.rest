@@ -1,0 +1,8 @@
+GET http://localhost:5000/connect
+Authorization: Basic Ym9iQGR5bGFuLmNvbTp0b3RvMTIzNCE="
+
+
+# POST http://localhost:5000/users
+# Content-Type: application/json
+
+# { "email": "bob@dylan.com", "password": "toto1234!" }
