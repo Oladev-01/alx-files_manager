@@ -39,12 +39,10 @@ class UsersController {
       return res.status(401).json({ error: 'Unauthorized' });
     }
     const userId = await redisClient.get(`auth_${getToken}`);
-    console.log(userId);
     if (!userId) {
       return res.status(401).json({ error: 'Unauthorized' });
     }
     const user = await DbClient.db.collection('users').findOne({ _id: new ObjectId(userId) });
-    console.log(user);
     return res.status(200).json({ email: user.email, id: userId });
   }
 }
